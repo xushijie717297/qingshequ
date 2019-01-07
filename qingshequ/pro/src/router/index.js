@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import About from '@/components/About'
 import Home from '@/components/Home'
 import Other from '@/components/Other'
+import Then from '@/components/Then'
 import Detail from '@/components/Detail'
 import Register from '@/components/Register'
 Vue.use(Router)
@@ -13,7 +14,7 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      redirect:'/register',
+      redirect:'/home',
       component: HelloWorld,
       children:[
 		     {
@@ -27,6 +28,10 @@ export default new Router({
 		    {
 		    		path:'/other',
 		    		component:Other
+		    },
+		    {
+		    		path:'/then',
+		    		component:Then
 		    }
       ]
     },
