@@ -1,9 +1,22 @@
 <template>
 	<div id="">
-		<h1>home</h1>
-		<ul>
-			<li v-for="item in list"><router-link :to="'/detail/'+item.pid">{{item.pname}}</router-link></li>
+		<header>
+			<ul>
+				
+			 <RouterLink to="/ghtea" tag="span"><li>早午茶</li></RouterLink>
+			 <RouterLink to="/wdyy" tag="span"><li>我的订阅</li></RouterLink>
+			 <RouterLink to="/cnxh" tag="span"><li>猜你喜欢</li></RouterLink>
+			 <RouterLink to="/move" tag="span"><li>视频</li></RouterLink>
+			 <RouterLink to="/music" tag="span"><li>音乐</li></RouterLink>
+			
 		</ul>
+		</header>
+		<section>
+			<div class="aaa">
+				<RouterView></RouterView>
+			</div>
+		</section>
+		
 	</div>
 </template>
 
@@ -13,24 +26,14 @@
 		name:"Home",
 		data(){
 			return{
-				str:'hello world vuejiashoujia',
-				tit:'首页',
-				list:[]
+				
 			}
 		},
 		methods:{
 			
 		},
 		mounted(){
-			this.$emit('toparent',this.tit)
-			var _this=this;
-			axios({
-				method:'get',
-				url:'http://jx.xuzhixiang.top/ap/api/productlist.php',
-				params:{uid:'11475'}
-			}).then((data)=>{
-				_this.list=data.data.data
-			})
+			
 			
 			
 		}
@@ -38,14 +41,48 @@
 	
 	
 </script>
-
+<!-- 	$(function () {  
+    alert(123);  
+ }); -->
 <style scoped="">
-	h1{
-		color: yellow;
-	}
-	li{
-		height: 50px;
-		border-bottom: 1px solid red;
+	html,body{height:100%}
+	body{display: flex;flex-direction: column;}
+	.router-link-active{
+		color: red;
 	}
 	
+	li{list-style: none;}
+	header{
+		height:50px;
+		display: flex;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+	ul{
+		width:100%;
+		height:50px;
+		display: flex;
+		justify-content: space-around;
+	}
+	li{
+		
+		height: 50px;
+		width:100%;		
+		line-height: 50px;
+		
+	}
+	
+	section{
+		flex: 1;
+		height:84vh;
+		/* flex-shrink: 1; */
+		overflow: auto;
+	}
+	footer{
+		height:50px;
+		flex-shrink: 0;
+	}
+	.aaa{
+		height:100%;
+	}
 </style>

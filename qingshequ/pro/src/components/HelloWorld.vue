@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
    	<!--<header>{{title}}</header>-->
-   	<mt-header fixed :title="title"></mt-header>	
+   		
    	<section>
    		<router-view @toparent="getdata"></router-view>
    	</section>
@@ -20,7 +20,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      title: '首页'
+      title: ''
     }
   },
   methods:{
@@ -33,6 +33,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped="">
+	
 	/*vw== 可视窗口 横向宽度*/
 	/*vh==竖向高度*/
 	.router-link-active{
@@ -46,7 +47,8 @@ export default {
 		flex-direction: column;
 	}
 	
-	footer{
+	header,footer{
+		flex-shrink: 0;
 		height: 50px;
 		background: orange;
 		text-align: center;
@@ -55,13 +57,17 @@ export default {
 	
 	section{
 		flex: 1;
-		margin-top: 40px;
+		flex-shrink: 1;
+		overflow: auto;
+		
 	}
 	footer{
+		
 		overflow: hidden;
 	}
 	
 	footer span{
+		
 		float: left;
 		width: 25%;
 	}

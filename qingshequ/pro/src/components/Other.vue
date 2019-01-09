@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>other</h1>
+		
 	</div>
 </template>
 
@@ -9,7 +9,7 @@
 		name:'Other',
 		data(){
 			return{
-				tit:'其他'
+				tit:'社区'
 			}
 		},
 		mounted(){
