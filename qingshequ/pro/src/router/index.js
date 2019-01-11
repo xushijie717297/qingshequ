@@ -30,6 +30,7 @@ import Huo from '@/components/Huo'
 import Tuo from '@/components/Tuo'
 import Yanjiuhui from '@/components/Yanjiuhui'
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -90,6 +91,16 @@ export default new Router({
     {
     		path:'/yanjiuhui',
     		component:Yanjiuhui
+    	
+    },
+    {
+    		path:'/tuijian',
+    		component:()=> import('@/components/Tuijian')
+    	
+    },
+    {
+    		path:'/riqian',
+    		component:()=> import('@/components/Riqian')
     	
     },
     {

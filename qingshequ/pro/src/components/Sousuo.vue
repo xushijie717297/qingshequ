@@ -1,9 +1,10 @@
 <template>
 	<div>
 		<header>
+			<div>
 		<router-link to="/sousuo" tag="span"><input type="text"  placeholder="　　搜索内容.主题.站" id="ss"></router-link>
 		<span class="fanhui" @click="fanhui()">返回 </span>
-		
+		</div>
 		
 		<ul class="list">
 			 <RouterLink to="/yuedu" tag="span"><li>阅读</li></RouterLink>
@@ -16,7 +17,7 @@
 		</ul>
 		</header>
 		<RouterView>
-			
+			<section></section>
 		</RouterView>
 	</div>
 </template>
@@ -31,7 +32,7 @@
 		},
 		methods:{
 			fanhui(){
-				this.$router.go(-1)
+				this.$router.push("./about")
 			}
 		}
 
@@ -46,6 +47,11 @@
 		flex-shrink: 0;
 		height:85px;
 		background: #cecece;
+	}
+	section{
+		flex: 1;
+		overflow: auto;
+		height:88vh;
 	}
 	#ss{
 		
@@ -77,7 +83,10 @@
 		height:50px;
 		justify-content: space-around;
 		align-items: center;
-	}	
+	}
+	.list span:hover{
+		border-bottom: 2px solid #999999;
+	}
 
 	
 </style>

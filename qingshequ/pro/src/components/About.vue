@@ -21,9 +21,9 @@
 					<p @click="spnd()"></p>
 				</div>
 				<div class="tuijian">
-					<h4>编辑推荐<span>更多></span></h4>
+					<h4>编辑推荐<span @click="rec()">更多></span></h4>
 					<div class="tuijian1">
-						<h4>轻社区电台<span class="iconfont icon-jia"></span></h4>
+						<h4>轻社区电台<span class="iconfont" :class='isOk?classA:classB' @click="message()"></span></h4>
 					<div class="tuijian_1">
 						<img />
 						<p>轻社区出品的博客节目，关于我们的未知与好奇，每周三更新</p>
@@ -81,11 +81,13 @@
 </template>
 
 <script>
+	import { MessageBox } from 'mint-ui';
 	export default{
 		name:'About',
 		data(){
 			return{
-				tit:'关于'
+				tit:'关于',
+				isOk:true, classA:'icon-jia',classB:'icon-fenxiang'
 			}
 		},
 		mounted(){
@@ -106,6 +108,14 @@
 			},
 			slnd(){
 				this.$router.push("/tuo")
+			},
+			rec(){
+				this.$router.push("/tuijian")
+			},
+			message(){
+				MessageBox.confirm('是否要订阅?').then(action => {
+					this.isOk =false
+}).catch(()=>{})
 			}
 		},
 	}

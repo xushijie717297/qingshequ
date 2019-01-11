@@ -57,6 +57,7 @@
 		display: flex;
 		justify-content: center;
 		flex-shrink: 0;
+		background: #cecece;
 	}
 	ul{
 		width:100%;
@@ -70,6 +71,9 @@
 		width:100%;		
 		line-height: 50px;
 		
+	}
+	span:hover{
+		border-bottom: 2px solid #999999;
 	}
 	
 	section{

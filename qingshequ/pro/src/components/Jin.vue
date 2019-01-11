@@ -2,13 +2,12 @@
 	<div>
 		<div class="huang">
 			<p></p>
-			
-			<RouterLink to="/yanjiuhui" tag="span"><div class="huang1">
-				<h4>英语学习研究会<span style="font-size:20px" class="iconfont icon-jia"></span></h4>
-				<h5>分享各种学习英语的技巧和方法</h5>
+			<router-link to="/yanjiuhui" tag="span"><div class="huang1">
+				<h4>英语学习研究社<span style="font-size:20px" class="iconfont icon-jia"></span></h4>
+				<h5>精选各种下饭综艺</h5>
 				<span class="huang2">2018.10.18更新，这毕竟是骚断腿的直男改造节目，更是每个普通人的爱与泪</span>
 				<b>18.9万人订阅</b>
-			</div></RouterLink>
+			</div></router-link>
 		</div>
 		<div class="huang">
 			<p></p>

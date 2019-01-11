@@ -12,7 +12,7 @@
 			<div class="three">
 				<div class="three1">
 					<p></p>
-					<div class="therr2">
+					<div class="three2">
 						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
 						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
 						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
@@ -20,7 +20,7 @@
 				</div>
 				<div class="three1">
 					<p></p>
-					<div class="therr2">
+					<div class="three2">
 						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
 						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
 						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
@@ -28,7 +28,7 @@
 				</div>
 				<div class="three1">
 					<p></p>
-					<div class="therr2">
+					<div class="three2">
 						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
 						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
 						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
@@ -36,7 +36,7 @@
 				</div>
 				<div class="three1">
 					<p></p>
-					<div class="therr2">
+					<div class="three2">
 						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
 						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
 						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
@@ -44,7 +44,7 @@
 				</div>
 				<div class="three1">
 					<p></p>
-					<div class="therr2">
+					<div class="three2">
 						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
 						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
 						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
@@ -52,7 +52,7 @@
 				</div>
 				<div class="three1">
 					<p></p>
-					<div class="therr2">
+					<div class="three2">
 						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
 						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
 						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
@@ -60,7 +60,7 @@
 				</div>
 				<div class="three1">
 					<p></p>
-					<div class="therr2">
+					<div class="three2">
 						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
 						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
 						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>

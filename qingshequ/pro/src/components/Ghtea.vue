@@ -12,8 +12,27 @@
 		</div>
 				<div class="riqian">
 					<h3>
-						<span></span>
-						轻社区日签
+						<div @click="godetail">
+							<span></span>
+							轻社区日签
+						</div>
+						<p @click="goto()">阅读</p>
+					</h3>
+					<div class="riqian1"></div>
+					<ul class="riqian2">
+						<span class="iconfont icon-tubiao212"></span>
+						<span class="iconfont icon-xihuan"></span>
+						<span class="iconfont icon-zan"><p style="font-size:12px;">123</p></span>
+						<span class="iconfont icon-pinglun"><p style="font-size:12px;">123</p></span>
+						<span class="iconfont icon-dian"></span>
+					</ul>
+				</div>
+				<div class="riqian">
+					<h3>
+						<div>
+							<span></span>
+							正午故事
+						</div>
 						<p>阅读</p>
 					</h3>
 					<div class="riqian1"></div>
@@ -27,9 +46,12 @@
 				</div>
 				<div class="riqian">
 					<h3>
-						<span></span>
-						正午故事
+						<div>
+							<span></span>
+							短片八分钟
+						</div>
 						<p>阅读</p>
+						
 					</h3>
 					<div class="riqian1"></div>
 					<ul class="riqian2">
@@ -42,23 +64,10 @@
 				</div>
 				<div class="riqian">
 					<h3>
-						<span></span>
-						短片八分钟
-						<p>阅读</p>
-					</h3>
-					<div class="riqian1"></div>
-					<ul class="riqian2">
-						<span class="iconfont icon-tubiao212"></span>
-						<span class="iconfont icon-xihuan"></span>
-						<span class="iconfont icon-zan"><p style="font-size:12px;">123</p></span>
-						<span class="iconfont icon-pinglun"><p style="font-size:12px;">123</p></span>
-						<span class="iconfont icon-dian"></span>
-					</ul>
-				</div>
-				<div class="riqian">
-					<h3>
-						<span></span>
-						轻社区日签
+						<div>
+							<span></span>
+							轻社区日签
+						</div>
 						<p>阅读</p>
 					</h3>
 					<div class="riqian1"></div>
@@ -82,11 +91,19 @@
 			return {
 				
 			};
+		},
+		methods:{
+			goto(){
+				this.$router.push("/yuedu")
+			},
+			godetail(){
+				this.$router.push("/riqian")
+			}
 		}
 	}
 </script>
 
-<style>
+<style scoped>
 	li{
 		list-style: none;
 	}
@@ -106,8 +123,6 @@
 		margin-bottom: 20px;
 	}
 	.main{
-		display: flex;
-		flex-direction: column;
 		height:102px;
 		width:100vw;
 		text-align: center;
@@ -148,20 +163,25 @@
 		height:60px;
 		/* background: red; */
 		align-items: center;
-		justify-content: space-between;
+		justify-content: flex-start;
 	}
-	.riqian h3 span{
+	.riqian h3 div{
+		display: flex;
+		align-items: center;
+		font-weight: 100;
+	}
+	.riqian h3 div span{
 		display: block;
-		height:40px;
-		width:10%;
+		height:35px;
+		width:35px;
 		background: #000000;
-		margin-top:10px;
-		margin-left:0;
+		margin-right: 20px;
 	}
 	.riqian p{
 		font-weight: 100;
 		font-size:14px;
-		
+		flex: 1;
+		text-align: right;
 		line-height: 60px;
 	}
 	.riqian1{
