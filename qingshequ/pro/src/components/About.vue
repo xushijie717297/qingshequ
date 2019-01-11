@@ -20,17 +20,18 @@
 					<p @click="sund()"></p>
 					<p @click="spnd()"></p>
 				</div>
+				 
 				<div class="tuijian">
 					<h4>编辑推荐<span @click="rec()">更多></span></h4>
-					<div class="tuijian1">
-						<h4>轻社区电台<span class="iconfont" :class='isOk?classA:classB' @click="message()"></span></h4>
+					<div class="tuijian1"  v-for='(item,index) in bbb' :key='index'>
+						<h4>{{item.bbb}}<span class="iconfont" :class='isOk?classA:classB' @click="message()"></span></h4>
 					<div class="tuijian_1">
-						<img />
-						<p>轻社区出品的博客节目，关于我们的未知与好奇，每周三更新</p>
-						<span>18.9万人关注/生活</span>
+						<img :src="item.ccc"/>
+						<p>{{item.ddd}}</p>
+						<span>{{item.eee}}万人关注/生活</span>
 					</div>	
 					</div>
-					<div class="tuijian2">
+					<!-- <div class="tuijian2">
 						<h4>轻社区电台<span class="iconfont icon-jia"></span></h4>
 					<div class="tuijian_1">
 						<img />
@@ -53,7 +54,7 @@
 						<p>轻社区出品的博客节目，关于我们的未知与好奇，每周三更新</p>
 						<span>18.9万人关注/生活</span>
 					</div>	
-					</div>
+					</div> -->
 				</div>
 				<div class="tuijian5">
 					<h4>排行榜与反馈</h4>
@@ -81,17 +82,27 @@
 </template>
 
 <script>
+	import axios from 'axios';
+	import Mock from 'mockjs';
 	import { MessageBox } from 'mint-ui';
 	export default{
 		name:'About',
 		data(){
 			return{
 				tit:'关于',
-				isOk:true, classA:'icon-jia',classB:'icon-fenxiang'
+				isOk:true, classA:'icon-jia',classB:'icon-fenxiang',
+				bbb:[]
 			}
 		},
 		mounted(){
-			this.$emit('toparent',this.tit)
+			var _this=this
+			axios({
+				method:'get',
+			url:"http://rap2api.taobao.org/app/mock/124134/contents"
+			}).then(function(data){
+				console.log(data.data.aaaa)
+				_this.bbb=data.data.aaaa
+			})
 		},
 		methods: {
 			sind(){
@@ -127,6 +138,7 @@
 	header{
 		height:50px;
 		flex-shrink: 0;
+		background: #cecece;
 	}
 	section{
 		height:84vh;
@@ -174,7 +186,7 @@
 		border-radius: 5px;
 	}
 	.tuijian{
-		height:485px;
+		height:440px;
 	}
 	.tuijian h4{
 		width:97vw;

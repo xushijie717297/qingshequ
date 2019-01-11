@@ -2,7 +2,7 @@
 	<div>
 		
 		<section>
-			<div style="height:100%;">
+			<div style="height:100%;background: #fff;">
 			<div class="four">
 				<p>图文</p>
 				<p>社会</p>
@@ -11,6 +11,46 @@
 			</div>
 			
 			<div class="three">
+				<div class="three1" v-for='(item,index) in nanshou' :key='index'>
+					<p><img :src="item.aaa"/></p>
+					<div class="therr2">
+						<h5 class="three-1">{{item.nnn}}</h5>
+						<span class="three-2">{{item.ggg}}</span>
+						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">{{item.uuu}}万人关注/生活</p>
+					</div>
+				</div>
+				<!-- <div class="three1">
+					<p></p>
+					<div class="three2">
+						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
+						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
+						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
+					</div>
+				</div>
+				<div class="three1">
+					<p></p>
+					<div class="three2">
+						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
+						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
+						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
+					</div>
+				</div>
+				<div class="three1">
+					<p></p>
+					<div class="three2">
+						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
+						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
+						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
+					</div>
+				</div>
+				<div class="three1">
+					<p></p>
+					<div class="three2">
+						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
+						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
+						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
+					</div>
+				</div>
 				<div class="three1">
 					<p></p>
 					<div class="therr2">
@@ -26,47 +66,7 @@
 						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
 						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
 					</div>
-				</div>
-				<div class="three1">
-					<p></p>
-					<div class="three2">
-						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
-						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
-						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
-					</div>
-				</div>
-				<div class="three1">
-					<p></p>
-					<div class="three2">
-						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
-						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
-						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
-					</div>
-				</div>
-				<div class="three1">
-					<p></p>
-					<div class="three2">
-						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
-						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
-						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
-					</div>
-				</div>
-				<div class="three1">
-					<p></p>
-					<div class="therr2">
-						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
-						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
-						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
-					</div>
-				</div>
-				<div class="three1">
-					<p></p>
-					<div class="three2">
-						<h5 class="three-1">我们只是把最美好的东西，存在了或长或短的遗言里</h5>
-						<span class="three-2">记得，以前我躺在沙发上看机顶盒里点播的</span>
-						<p class="three-3" style="height:30px;font-size:12px;line-height: 40px;margin-left:3vw;background: none;">18.9万人关注/生活</p>
-					</div>
-				</div>
+				</div> -->
 			</div>
 			</div>
 		</section>
@@ -74,12 +74,24 @@
 </template>
 
 <script>
+	import axios from 'axios';
+	import Mock from 'mockjs';
 	export default {
 		name:'Yuedu',
 		data() {
 			return {
-				
+				nanshou:[]
 			};
+		},
+		mounted(){
+			var _this=this
+			axios({
+				method:'get',
+			url:"http://rap2api.taobao.org/app/mock/124134/nanguo"
+			}).then(function(data){
+				console.log(data.data.nanshou)
+				_this.nanshou=data.data.nanshou
+			})
 		}
 	}
 	

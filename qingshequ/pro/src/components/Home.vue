@@ -22,6 +22,7 @@
 
 <script>
 	import axios from 'axios';
+	import Mock from 'mockjs';
 	export default {
 		name:"Home",
 		data(){
@@ -33,9 +34,6 @@
 			
 		},
 		mounted(){
-			
-			
-			
 		}
 	}
 	

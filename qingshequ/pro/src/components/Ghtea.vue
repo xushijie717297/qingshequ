@@ -10,15 +10,20 @@
 				<p class="rili iconfont icon-linedesign-18"></p>
 			</div>
 		</div>
-				<div class="riqian">
+				<div class="riqian" v-for='(item,index) in img' :key='index'>
+					
 					<h3>
 						<div @click="godetail">
-							<span></span>
-							轻社区日签
+							<span>
+								<img :src="item.img"/>
+							</span>
+							{{item.title}}
 						</div>
 						<p @click="goto()">阅读</p>
 					</h3>
-					<div class="riqian1"></div>
+					<div class="riqian1">
+						<img :src="item.bimg" />
+					</div>
 					<ul class="riqian2">
 						<span class="iconfont icon-tubiao212"></span>
 						<span class="iconfont icon-xihuan"></span>
@@ -27,7 +32,7 @@
 						<span class="iconfont icon-dian"></span>
 					</ul>
 				</div>
-				<div class="riqian">
+				<!-- <div class="riqian">
 					<h3>
 						<div>
 							<span></span>
@@ -78,18 +83,20 @@
 						<span class="iconfont icon-pinglun"><p style="font-size:12px;">123</p></span>
 						<span class="iconfont icon-dian"></span>
 					</ul>
-				</div>
+				</div> -->
 			<div class="foot">查看更多＞＞</div>
 		</section>
 	</div>
 </template>
 
 <script>
+	import axios from 'axios';
+	import Mock from 'mockjs';
 	export default {
 		name:'Ghtea',
 		data() {
 			return {
-				
+				img:[]
 			};
 		},
 		methods:{
@@ -99,6 +106,17 @@
 			godetail(){
 				this.$router.push("/riqian")
 			}
+		},
+		mounted(){
+			var _this=this
+			axios({
+				method:'get',
+			url:"http://rap2api.taobao.org/app/mock/120452/tupian"
+
+			}).then(function(data){
+				console.log(data.data.img)
+				_this.img=data.data.img
+			})
 		}
 	}
 </script>

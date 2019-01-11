@@ -50,7 +50,7 @@ export default {
 	header,footer{
 		flex-shrink: 0;
 		height: 50px;
-		background: orange;
+		background: #cecece;
 		text-align: center;
 		line-height: 50px;
 	}
@@ -67,7 +67,7 @@ export default {
 	}
 	
 	footer span{
-		
+		color:#000000;
 		float: left;
 		width: 25%;
 	}

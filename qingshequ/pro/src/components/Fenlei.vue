@@ -38,7 +38,7 @@ oSpan.onclick=function(){
 		},
 		methods:{
 			fanhui(){
-				this.$router.go(-1)
+				this.$router.push("/about")
 			},
 			sind(){
 				this.$router.push("/jin")

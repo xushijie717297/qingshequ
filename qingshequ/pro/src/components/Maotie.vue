@@ -56,13 +56,13 @@
 	}
 </script>
 
-<style>
+<style scoped="">
 	header{
+		height:6vh;
 		flex-shrink: 0;
 		align-items: center;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
 		/* background: #cecece; */
 	}
 	.ccc{
