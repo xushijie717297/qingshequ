@@ -92,6 +92,7 @@
 <script>
 	import axios from 'axios';
 	import Mock from 'mockjs';
+	import { Indicator } from 'mint-ui';
 	export default {
 		name:'Ghtea',
 		data() {
@@ -109,6 +110,7 @@
 		},
 		mounted(){
 			var _this=this
+			Indicator.open('加载中...'),
 			axios({
 				method:'get',
 			url:"http://rap2api.taobao.org/app/mock/120452/tupian"
@@ -116,6 +118,7 @@
 			}).then(function(data){
 				console.log(data.data.img)
 				_this.img=data.data.img
+				Indicator.close()
 			})
 		}
 	}

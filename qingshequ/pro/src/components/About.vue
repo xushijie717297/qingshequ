@@ -7,9 +7,9 @@
 			<div class="bbb">
 				<router-link to="/maotie"><div>
 					<mt-swipe :auto="4000" style="height:200px">
-					  <mt-swipe-item style="background: red;">1</mt-swipe-item>
-					  <mt-swipe-item style="background: yellow;">2</mt-swipe-item>
-					  <mt-swipe-item style="background: pink;">3</mt-swipe-item>
+					  <mt-swipe-item style="background: red;" v-for='(item,index) in list' :key='index'><img :src="item.banner_img_url" style="height:200px;width:360px;"/></mt-swipe-item>
+					  <!-- <mt-swipe-item style="background: yellow;">2</mt-swipe-item>
+					  <mt-swipe-item style="background: pink;">3</mt-swipe-item> -->
 					</mt-swipe>
 			</div></router-link>
 			<div class="fenlei">
@@ -85,23 +85,27 @@
 	import axios from 'axios';
 	import Mock from 'mockjs';
 	import { MessageBox } from 'mint-ui';
+	import { Indicator } from 'mint-ui';
 	export default{
 		name:'About',
 		data(){
 			return{
 				tit:'关于',
 				isOk:true, classA:'icon-jia',classB:'icon-fenxiang',
-				bbb:[]
+				bbb:[],
+				list:[]
 			}
 		},
 		mounted(){
-			var _this=this
-			axios({
-				method:'get',
-			url:"http://rap2api.taobao.org/app/mock/124134/contents"
-			}).then(function(data){
-				console.log(data.data.aaaa)
-				_this.bbb=data.data.aaaa
+			
+			Indicator.open('加载中...'),
+			axios.all([this.a(),this.b()]).then(res=>{
+				
+				console.log(res[0].data)
+				console.log(res[1].data.data)
+				this.bbb=res[0].data.aaaa
+				this.list=res[1].data.data
+				Indicator.close()
 			})
 		},
 		methods: {
@@ -127,8 +131,14 @@
 				MessageBox.confirm('是否要订阅?').then(action => {
 					this.isOk =false
 }).catch(()=>{})
+			},
+			a(){
+				return axios.get('http://rap2api.taobao.org/app/mock/124134/contents')
+			},
+			b(){
+				return axios.get('http://jx.xuzhixiang.top/ap/api/bannerlist.php?uid=11475')
 			}
-		},
+		}
 	}
 </script>
 

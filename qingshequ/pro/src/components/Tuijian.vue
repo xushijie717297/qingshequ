@@ -9,7 +9,20 @@
 		<section>
 			<div class="blue_1">
 				<ul>
-					<li>
+					<li v-for='(item,index) in img' :key='index'>
+						<div class="blue1">
+							<h4>{{item.one}}</h4>
+							<span class="iconfont icon-jia"></span>
+						</div>
+						<div class="blue2">
+							<p><img :src="item.three"/></p>
+							<div class="blue21">
+								<b>{{item.two}}</b>
+								<span style="font-size:14px;">{{item.four}}万人关注/科普</span>
+							</div>
+						</div>
+					</li>
+					<!-- <li>
 						<div class="blue1">
 							<h4>外滩教育</h4>
 							<span class="iconfont icon-jia"></span>
@@ -60,20 +73,7 @@
 								<span style="font-size:14px;">15.9万人关注/科普</span>
 							</div>
 						</div>
-					</li>
-					<li>
-						<div class="blue1">
-							<h4>外滩教育</h4>
-							<span class="iconfont icon-jia"></span>
-						</div>
-						<div class="blue2">
-							<p></p>
-							<div class="blue21">
-								<b>花样福利不定期风尚</b>
-								<span style="font-size:14px;">15.9万人关注/科普</span>
-							</div>
-						</div>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</section>
@@ -81,17 +81,33 @@
 </template>
 
 <script>
+	import axios from 'axios';
+	import Mock from 'mockjs';
+	import { Indicator } from 'mint-ui';
 	export default {
 		name:'Tuijian',
 		data() {
 			return {
-				
+				img:[]
 			};
 		},
 		methods:{
 			fanhui(){
-				this.$router.go(-1)
+				this.$router.push("/about")
 			}
+		},
+		mounted(){
+			var _this=this
+			Indicator.open('加载中...'),
+			axios({
+				method:'get',
+			url:"http://rap2api.taobao.org/app/mock/124134/egege"
+		
+			}).then(function(data){
+				console.log(data.data.more)
+				_this.img=data.data.more
+				Indicator.close()
+			})
 		}
 	}
 </script>
